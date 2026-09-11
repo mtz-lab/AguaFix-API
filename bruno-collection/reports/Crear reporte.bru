@@ -1,0 +1,20 @@
+meta {
+  name: Crear reporte
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/reports
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "address": "Av. Siempre Viva 123, Leon Gto",
+    "description": "Fuga importante saliendo de la banqueta",
+    "severity": "high",
+    "reporterPhone": "4771234567"
+  }
+}
