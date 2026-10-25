@@ -11,9 +11,10 @@ export class ReportsRepository {
     private readonly reportOrmRepository: Repository<Report>,
   ) {}
 
-  create(dto: CreateReportDto): Report {
+  create(dto: CreateReportDto, photoUrl: string): Report {
     return this.reportOrmRepository.create({
       ...dto,
+      photoUrl,
       isResolved: false,
     });
   }
