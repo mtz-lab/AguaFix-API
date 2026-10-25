@@ -31,7 +31,8 @@ export class ReportsService {
         html,
       );
     } catch (error) {
-      // El reporte ya quedo guardado en base de datos aunque el correo falle;
+      // El reporte ya quedo guardado en base de datos aunque el correo llegue a fallar
+      //no debe de haber problema
       // solo se deja constancia en el log para no romper la respuesta al ciudadano.
       this.logger.error('El reporte se guardo pero el correo de aviso fallo', error);
     }
